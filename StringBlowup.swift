@@ -20,7 +20,7 @@ for strIndex in 0...stringWithNumber.count - 1 {
         if strIndex != stringWithNumber.count - 1 {
             let charCount: Int = Array(stringWithNumber)[strIndex
                                                           ].wholeNumberValue ?? 0
-            for _ in 0...charCount - 1 {
+            for _ in 0...charCount - 2 {
                 convertedString.append(Array(stringWithNumber)[strIndex + 1])
           }
         }
