@@ -20,11 +20,13 @@ for strIndex in 0...stringWithNumber.count - 1 {
         if strIndex != stringWithNumber.count - 1 {
             let charCount: Int = Array(stringWithNumber)[strIndex
                                                           ].wholeNumberValue ?? 0
-            for _ in 0...charCount - 2 {
+            for _ in 0...charCount - 1 {
                 convertedString.append(Array(stringWithNumber)[strIndex + 1])
-          }
+            }
         }
-    } else {
+    } else if strIndex == 0 {
+        convertedString.append(Array(stringWithNumber)[strIndex])
+    } else if !Array(stringWithNumber)[strIndex - 1].isWholeNumber {
         convertedString.append(Array(stringWithNumber)[strIndex])
     }
 }
